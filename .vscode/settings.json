@@ -1,0 +1,9 @@
+{
+    "workbench.colorCustomizations": {
+        "editor.findMatchBackground": "#ff00008f",
+        "editor.findMatchBorder": "#f2ff0042",
+        "activityBar.background": "#5E0E01",
+        "titleBar.activeBackground": "#831402",
+        "titleBar.activeForeground": "#FFFBFB"
+    }
+}

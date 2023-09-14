@@ -1,113 +1,116 @@
-import Image from 'next/image'
+import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main
+      className="max-w-[390px] mx-auto border border-black px-[20px] flex flex-col gap-5"
+      style={{
+        backgroundImage: "url(graphics/top-background.png)",
+        //backgroundPosition: "-455.504px -1.516px",
+        backgroundPosition: "0px 0px",
+        //backgroundSize: "208.085% 100.011%",
+        //backgroundSize: "100% 100%",
+        backgroundRepeat: "no-repeat",
+        backgroundColor: "lightgray", // If you want a fallback background color
+      }}>
+      <nav className="flex justify-between">
+        <div>
+          <button>
+            <img src="graphics/menu.svg" />
+          </button>
         </div>
-      </div>
+        <div className="flex gap-3">
+          <button>
+            <img src="graphics/icon-save.png" />
+          </button>
+          <button>
+            <img src="graphics/icon-cart.png" />
+          </button>
+          <button>
+            <img src="graphics/icon-user.png" />
+          </button>
+        </div>
+      </nav>
+      <section className="">
+        <img src="graphics/logo.png" className="mx-auto w-[284px] h-52px]" />
+      </section>
+      <section>
+        <h1 className="text-center text-[21px] font-normal leading-[23px] text-[#141414]">
+          Generate your ART by typing in field below any words that comes to your mind!
+        </h1>
+      </section>
+      <section className="flex">
+        <div className="w-1/3 h-[24px] flex items-center flex-wrap">
+          <div className="w-full h-[5px] bg-[#CE2B28] relative rounded-[5px]">
+            <div className="absolute w-[24px] h-[24px] bg-[#CE2B28] text-white flex justify-center items-center text-[16px] rounded-[9px] left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2">
+              1
+            </div>
+          </div>
+          <div className="text-center">Generate image</div>
+        </div>
+        <div className="w-1/3 h-[24px] flex items-center flex-wrap">
+          <div className="w-full h-[5px] bg-[#E5E5E7] relative rounded-[5px]">
+            <div className="absolute w-[24px] h-[24px] bg-[#E5E5E7] text-[#9C9C9C] flex justify-center items-center text-[16px] rounded-[9px] left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2">
+              2
+            </div>
+          </div>
+          <div className="text-center">Choose your product</div>
+        </div>
+      </section>
+      <section>
+        <div className="relative">
+          <input
+            placeholder="What do you want to create?"
+            className="p-[12px] h-[48px] bg-[#F5F5F6] border border-[#B7B2B2] rounded-[9px] w-full"
+            style={{ boxShadow: "1px 2px 5px 0px #C0C1C9" }}></input>
+          <button className="bg-[#CE2B28] absolute right-0 top-0 flex justify-center items-center h-full w-[53px] rounded-[9px]">
+            <img src="graphics/icon-pen-white-1.png" />
+          </button>
+        </div>
+      </section>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+      <section className="flex justify-between gap-[11px] font-semibold text-[14px] text-black">
+        <button className="w-1/3 h-[47px] bg-[#F5F5F6] rounded-[7px] ">High Quality</button>
+        <button className="w-1/3 h-[47px] bg-[#F5F5F6] rounded-[7px]">Pop Art</button>
+        <button className="w-1/3 h-[47px] bg-[#F5F5F6] rounded-[7px]">Realistic Look</button>
+      </section>
 
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+      <section
+        style={{ boxShadow: "0px 4px 4px 0px rgba(0, 0, 0, 0.25)" }}
+        className="flex rounded-[9px]  bg-[#E3E4E7] bg-opacity-[26%] overflow-hidden">
+        <div className="w-1/2 mx-auto text-center">
+          <p>Style preview</p>
+          <img src="graphics/OPQ72O0-10.png" className="mx-auto" />
+        </div>
+        <div className="w-1/2 bg-[#F7F7F8] text-center">
+          <div className="flex justify-center items-center flex-col h-full">
+            <p>MINIMALISTIC</p>
+            <p>CARTOON</p>
+            <p>ARTISTIC</p>
+          </div>
+        </div>
+      </section>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+      <section className="bg-[#E3E4E7] bg-opacity-[26%] text-center">
+        <h2 className="text-[20px] text-[#CB2B28] font-bold">GET INSPIRED!</h2>
+        <h3 className="text-[20px] text-black font-medium">BEST USERS DESIGN</h3>
+        <button className="flex text-[18px] text-[#1E1E1E] mx-auto items-center gap-2">
+          <span>See more</span>
+          <img src="graphics/right-arrow.png" />
+        </button>
+        <img src="graphics/18851834a-2.png" className="mx-auto" />
+        <div className="relative">
+          <input
+            placeholder="punk heart, gothic"
+            className="p-[12px] h-[48px] bg-[#E5E5E7] rounded-[9px] w-full placeholder-black"></input>
+          <button className="bg-gradient-to-b from-[#CFCFD0] via-transparent absolute right-0 top-0 flex justify-center items-center h-full px-4 rounded-r-[9px]">
+            ARTISTIC
+          </button>
+        </div>
+        <button className="bg-[#CB2B28] text-white text-[20px] font-semibold w-[178px] h-[44px] rounded-[7px]">
+          BUY
+        </button>
+      </section>
     </main>
-  )
+  );
 }
