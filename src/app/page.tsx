@@ -47,14 +47,14 @@ export default function Home() {
 
       {/* STEPS */}
       <section className='relative my-[22px] flex h-[62px]'>
-        <div className='absolute left-0 h-[5px] w-2/3 rounded-[5px] bg-[#CE2B28]'></div>
+        <div className='bg-persian-red-600 absolute left-0 h-[5px] w-2/3 rounded-[5px]'></div>
         <div className='flex h-[24px] w-1/3 flex-wrap items-center justify-center'>
           <div className='relative h-[5px] w-full rounded-[5px] bg-transparent'>
-            <div className='absolute left-1/2 top-1/2 flex h-[24px] w-[24px] -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-[9px] bg-[#CE2B28] text-[16px] text-white'>
+            <div className='bg-persian-red-600 absolute left-1/2 top-1/2 flex h-[24px] w-[24px] -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-[9px] text-[16px] text-white'>
               1
             </div>
           </div>
-          <div className='w-full pt-3 text-center text-[14px] font-semibold leading-4 text-[#CB2B28]'>
+          <div className='text-persian-red-600 w-full pt-3 text-center text-[14px] font-semibold leading-4'>
             Generate
             <br /> image
           </div>
@@ -91,8 +91,12 @@ export default function Home() {
             placeholder='What do you want to create?'
             className='h-[48px] w-full rounded-[9px] bg-[#F5F5F6] p-[12px] focus:outline-[#F5F5F6]'
           ></input>
-          <button className='absolute right-0 top-0 flex h-full w-[53px] items-center justify-center rounded-[9px] bg-[#CE2B28]'>
-            <img src='graphics/icon-pen-white-1.png' alt='pen white icon' />
+          <button className='bg-persian-red-600 hover:bg-persian-red-700 active:bg-persian-red-800 group absolute right-0 top-0 flex h-full w-[53px] items-center justify-center rounded-[9px]'>
+            <img
+              src='graphics/icon-pen-white-1.png'
+              alt='pen white icon'
+              className='transition-all group-active:scale-95'
+            />
           </button>
         </div>
       </section>
@@ -131,7 +135,7 @@ export default function Home() {
           <div className='flex h-full flex-col items-center justify-center space-y-2'>
             <button className='text-[14px] font-semibold'>MINIMALISTIC</button>
             <button
-              className='rounded-[7px] bg-[#CB2B28] px-[20px] py-[10px] text-[16px] font-semibold text-[#F5F5F6]'
+              className='bg-persian-red-600 rounded-[7px] px-[20px] py-[10px] text-[16px] font-semibold text-[#F5F5F6]'
               style={{
                 boxShadow: '4px 4px 10px 0px rgba(64, 53, 53, 0.49) inset',
                 filter: 'drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))',
@@ -160,7 +164,7 @@ export default function Home() {
       {/* GET INSPIRED SECTION */}
       <section className='my-[12px] space-y-4 rounded-[9px] bg-[#E3E4E7] bg-opacity-[26%] pb-[26px] pt-[8px] text-center'>
         <div>
-          <h2 className='text-[20px] font-bold text-[#CB2B28]'>
+          <h2 className='text-persian-red-600 text-[20px] font-bold'>
             GET INSPIRED!
           </h2>
           <h3 className='text-[20px] font-medium text-black'>
@@ -177,12 +181,16 @@ export default function Home() {
             placeholder='punk heart, gothic'
             className='h-[48px] w-full rounded-l-[9px] bg-[#E5E5E7] p-[12px] placeholder-black  focus:outline-transparent'
           ></input>
-          <button className='flex h-[48px] items-center justify-center rounded-r-[9px] bg-gradient-to-b from-[#CFCFD0] to-transparent px-4'>
-            ARTISTIC
+          <button className='group flex h-[48px] items-center justify-center rounded-r-[9px] bg-gradient-to-b from-[#CFCFD0] to-transparent px-4'>
+            <span className='transition group-hover:scale-105 group-active:scale-95'>
+              ARTISTIC
+            </span>
           </button>
         </div>
-        <button className='h-[44px] w-[178px] rounded-[7px] bg-[#CB2B28] text-[20px] font-semibold text-white'>
-          BUY
+        <button className='bg-persian-red-600 hover:bg-persian-red-700 active:bg-persian-red-800 h-[44px] w-[178px] rounded-[7px] text-[20px] font-semibold text-white transition'>
+          <span className='group-hover:bg-persian-red-700 group-active:bg-persian-red-800 transition'>
+            BUY
+          </span>
         </button>
       </section>
     </main>
