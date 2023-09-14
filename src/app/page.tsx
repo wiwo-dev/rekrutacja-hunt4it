@@ -59,7 +59,7 @@ export default function Home() {
           </div>
         </div>
         <div className="w-1/3 h-[24px] flex items-center flex-wrap">
-          <div className="w-full h-[5px] bg-[#E5E5E7] relative ">
+          <div className="w-full h-[5px] bg-[#E5E5E7] relative rounded-r-[5px]">
             <div className="absolute w-[24px] h-[24px] bg-[#E5E5E7] text-[#9C9C9C] flex justify-center items-center text-[16px] rounded-[9px] left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2">
               3
             </div>
