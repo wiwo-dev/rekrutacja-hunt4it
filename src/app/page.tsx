@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
     <main
@@ -12,23 +10,23 @@ export default function Home() {
       <nav className="flex justify-between py-[38px]">
         <div>
           <button>
-            <img src="graphics/menu.svg" />
+            <img src="graphics/menu.svg" alt="menu icon" />
           </button>
         </div>
         <div className="flex gap-3">
           <button>
-            <img src="graphics/icon-heart.png" />
+            <img src="graphics/icon-heart.png" alt="favorites icon" />
           </button>
           <button>
-            <img src="graphics/icon-cart.png" />
+            <img src="graphics/icon-cart.png" alt="cart icon" />
           </button>
           <button>
-            <img src="graphics/icon-user.png" />
+            <img src="graphics/icon-user.png" alt="user profile icon" />
           </button>
         </div>
       </nav>
       <section className="">
-        <img src="graphics/logo.png" className="mx-auto w-[284px] h-[52px]" />
+        <img src="graphics/logo.png" className="mx-auto w-[284px] h-[52px]" alt="logo" />
       </section>
       <section className="my-[24px]">
         <h1 className="text-center text-[21px] font-normal font-open-sans leading-[23px] text-[#141414]">
@@ -76,7 +74,7 @@ export default function Home() {
             placeholder="What do you want to create?"
             className="p-[12px] h-[48px] bg-[#F5F5F6] rounded-[9px] w-full focus:outline-[#F5F5F6]"></input>
           <button className="bg-[#CE2B28] absolute right-0 top-0 flex justify-center items-center h-full w-[53px] rounded-[9px]">
-            <img src="graphics/icon-pen-white-1.png" />
+            <img src="graphics/icon-pen-white-1.png" alt="pen white icon" />
           </button>
         </div>
       </section>
@@ -92,14 +90,18 @@ export default function Home() {
         className="flex rounded-[9px]  bg-[#E3E4E7] bg-opacity-[86%] overflow-hidden my-[12px]">
         <div className="w-1/2 mx-auto text-center space-y-1 bg-[#F9F9FA] py-3 relative">
           <p className="text-[13px] font-semibold">Style preview</p>
-          <img src="graphics/OPQ72O0-10.png" className="mx-auto" />
-          <img src="graphics/arrow-down-sign-to-navigate.png" className="absolute top-[16px] left-[8px]" />
+          <img src="graphics/OPQ72O0-10.png" className="mx-auto" alt="image" />
+          <img
+            src="graphics/arrow-down-sign-to-navigate.png"
+            className="absolute top-[16px] left-[8px]"
+            alt="arrow icon"
+          />
         </div>
         <div className="w-1/2 bg-[#F3F3F4] text-center">
           <div className="flex justify-center items-center flex-col h-full space-y-2">
             <p className="text-[14px] font-semibold">MINIMALISTIC</p>
             <div className="flex gap-2 items-center">
-              <img src="graphics/scrolling.png" />
+              <img src="graphics/scrolling.png" alt="scrolling icon" />
               <div
                 className="bg-[#CB2B28] py-[10px] px-[20px] rounded-[7px] text-[#F5F5F6] text-[16px] font-semibold"
                 style={{
@@ -110,7 +112,7 @@ export default function Home() {
               </div>
             </div>
             <div className="flex gap-2 items-center justify-center">
-              <img src="graphics/padlock-2.png" />
+              <img src="graphics/padlock-2.png" alt="padlock icon" />
               <span
                 className="text-[14px] font-semibold font-outline-1 text-white"
                 style={{ textShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)" }}>
@@ -127,10 +129,10 @@ export default function Home() {
           <h3 className="text-[20px] text-black font-medium">BEST USERS DESIGN</h3>
           <button className="flex text-[18px] text-[#1E1E1E] mx-auto items-center gap-2">
             <span>See more</span>
-            <img src="graphics/right-arrow.png" />
+            <img src="graphics/right-arrow.png" alt="right arrow icon" />
           </button>
         </div>
-        <img src="graphics/18851834a-2.png" className="mx-auto" />
+        <img src="graphics/18851834a-2.png" className="mx-auto" alt="image" />
         <div className="relative flex bg-[#E5E5E7] rounded-[9px] overflow-hidden">
           <input
             placeholder="punk heart, gothic"
