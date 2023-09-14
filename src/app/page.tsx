@@ -27,35 +27,46 @@ export default function Home() {
           </button>
         </div>
       </nav>
-      <section className="py-[22px]">
+      <section className="">
         <img src="graphics/logo.png" className="mx-auto w-[284px] h-[52px]" />
       </section>
-      <section className="py-[22px]">
+      <section className="my-[24px]">
         <h1 className="text-center text-[21px] font-normal font-open-sans leading-[23px] text-[#141414]">
           Generate your ART
           <br /> by typing in field below any words that comes to your mind!
         </h1>
       </section>
 
-      <section className="flex h-[62px] my-[22px]">
+      <section className="flex h-[62px] my-[22px] relative">
+        <div className="w-full h-[5px] bg-[#CE2B28] rounded-[5px] absolute left-0"></div>
         <div className="w-1/3 h-[24px] flex items-center justify-center flex-wrap">
-          <div className="w-full h-[5px] bg-[#CE2B28] relative rounded-[5px]">
+          <div className="w-full h-[5px] bg-transparent relative rounded-[5px]">
             <div className="absolute w-[24px] h-[24px] bg-[#CE2B28] text-white flex justify-center items-center text-[16px] rounded-[9px] left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2">
               1
             </div>
           </div>
-          <div className="text-center text-[14px] text-[#CB2B28] font-semibold leading-4 pt-3">
+          <div className="text-center text-[14px] text-[#CB2B28] font-semibold leading-4 pt-3 w-full">
             Generate
             <br /> image
           </div>
         </div>
         <div className="w-1/3 h-[24px] flex items-center flex-wrap">
-          <div className="w-full h-[5px] bg-[#E5E5E7] relative rounded-[5px]">
+          <div className="w-full h-[5px] bg-[#E5E5E7] relative rounded-l-[5px]">
             <div className="absolute w-[24px] h-[24px] bg-[#E5E5E7] text-[#9C9C9C] flex justify-center items-center text-[16px] rounded-[9px] left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2">
               2
             </div>
           </div>
-          <div className="text-center text-[14px] text-[#C0C1C9] font-semibold leading-4 pt-3">Choose your product</div>
+          <div className="text-center text-[14px] text-[#C0C1C9] font-semibold leading-4 pt-3 w-full">
+            Choose your product
+          </div>
+        </div>
+        <div className="w-1/3 h-[24px] flex items-center flex-wrap">
+          <div className="w-full h-[5px] bg-[#E5E5E7] relative ">
+            <div className="absolute w-[24px] h-[24px] bg-[#E5E5E7] text-[#9C9C9C] flex justify-center items-center text-[16px] rounded-[9px] left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2">
+              3
+            </div>
+          </div>
+          <div className="text-center text-[14px] text-[#C0C1C9] font-semibold leading-4 pt-3 w-full">Order</div>
         </div>
       </section>
 

@@ -7,6 +7,10 @@
 :root {
 }
 
+* {
+  font-variant-numeric: lining-nums;
+}
+
 @media (prefers-color-scheme: dark) {
 }
 
