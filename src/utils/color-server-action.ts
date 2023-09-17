@@ -8,8 +8,17 @@ export async function generateColors(inputString: string) {
 
   const color = stringToColor(inputString);
   let result;
+
+  //to slow down the API for testing
+  await new Promise((res) => {
+    setTimeout(() => {
+      res('');
+    }, 200);
+  });
+
   try {
     const response = await fetch('http://colormind.io/api/', {
+      cache: 'no-cache',
       method: 'POST',
       headers: {
         'Content-type': 'application/json',
