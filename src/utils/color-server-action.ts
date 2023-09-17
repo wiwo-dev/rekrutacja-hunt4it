@@ -13,7 +13,7 @@ export async function generateColors(inputString: string) {
   await new Promise((res) => {
     setTimeout(() => {
       res('');
-    }, 200);
+    }, 1000);
   });
 
   try {
