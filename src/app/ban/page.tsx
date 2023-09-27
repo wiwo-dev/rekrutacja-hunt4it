@@ -1,7 +1,7 @@
 'use client';
 
 import Button from '@/components/Button';
-import { useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import BannedWordsModal from './components/banned-words-modal';
 import ModalOverlay from './components/modal-overlay';
 
