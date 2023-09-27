@@ -1,23 +1,20 @@
 'use client';
 
 import Button from '@/components/Button';
-import Modal from '@/components/Modal';
-import AlertOctagon from '@/components/icons/alert-octagon';
-import X from '@/components/icons/x';
 import { useState } from 'react';
-import ModalOverlay from './components/modal-overlay';
 import BannedWordsModal from './components/banned-words-modal';
+import ModalOverlay from './components/modal-overlay';
 
 type Props = {};
 
 export default function BanPage({}: Props) {
-  const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const toggleModalOpen = () => {
-    setModalIsOpen((prev) => !prev);
+    setIsModalOpen((prev) => !prev);
   };
 
   const closeModal = () => {
-    setModalIsOpen(false);
+    setIsModalOpen(false);
   };
 
   return (
@@ -27,13 +24,9 @@ export default function BanPage({}: Props) {
           <Button onClick={toggleModalOpen}>CLICK</Button>
         </div>
 
-        {modalIsOpen && (
-          <ModalOverlay onClose={closeModal}>
-            <div className=''>
-              <BannedWordsModal onClose={closeModal} />
-            </div>
-          </ModalOverlay>
-        )}
+        <ModalOverlay onClose={closeModal} isOpen={isModalOpen}>
+          <BannedWordsModal onClose={closeModal} />
+        </ModalOverlay>
 
         {/* <Modal isOpen={modalIsOpen} onClose={() => setModalIsOpen(false)}>
           <p>Hello</p>
