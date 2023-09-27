@@ -24,8 +24,8 @@ const texts = [
 type Props = { onClose: () => void };
 
 export default function BannedWordsModal({ onClose }: Props) {
-  //const versionNumber = Math.floor(Math.random() * 4);
-  const versionNumber = 1;
+  const versionNumber = Math.floor(Math.random() * 4);
+  //const versionNumber = 1;
 
   return (
     <div
