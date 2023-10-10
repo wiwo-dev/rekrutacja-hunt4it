@@ -13,11 +13,8 @@ export async function GET(request: Request) {
   //     (res) => res.arrayBuffer()
   //   );
 
-  const logo = await fetch(
-    new URL('./assets/img/logo.png', import.meta.url)
-  ).then((res) => res.arrayBuffer());
-  const expressYourself = await fetch(
-    new URL('./assets/img/express-yourself.png', import.meta.url)
+  const logoAndHeadline = await fetch(
+    new URL('./assets/img/logo-and-headline.png', import.meta.url)
   ).then((res) => res.arrayBuffer());
 
   const men = await fetch(
@@ -55,18 +52,18 @@ export async function GET(request: Request) {
             <div tw='flex flex-col justify-between p-10 py-30'>
               <div tw='flex flex-col'>
                 <img
-                  src={logo as any as string}
-                  width='573'
-                  height='77'
+                  src={logoAndHeadline as any as string}
+                  width='583'
+                  height='137'
                   //className='h-[100px] w-[300px]'
                 />
-                <div tw='flex justify-end pr-20'>
+                {/* <div tw='flex justify-end pr-20'>
                   <img
                     src={expressYourself as any as string}
                     width='262'
                     height='42'
                   />
-                </div>
+                </div> */}
               </div>
               <div tw='flex pl-20'>
                 <h2
