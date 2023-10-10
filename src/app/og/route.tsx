@@ -13,16 +13,16 @@ export async function GET(request: Request) {
   //     (res) => res.arrayBuffer()
   //   );
 
-  const logo = await fetch('http://localhost:3001/img/logo.png').then((res) =>
-    res.arrayBuffer()
-  );
+  const logo = await fetch(
+    new URL('./assets/img/logo.png', import.meta.url)
+  ).then((res) => res.arrayBuffer());
   const expressYourself = await fetch(
-    'http://localhost:3001/img/express-yourself.png'
+    new URL('./assets/img/express-yourself.png', import.meta.url)
   ).then((res) => res.arrayBuffer());
 
-  const men = await fetch('http://localhost:3001/img/men.png').then((res) =>
-    res.arrayBuffer()
-  );
+  const men = await fetch(
+    new URL('./assets/img/men.png', import.meta.url)
+  ).then((res) => res.arrayBuffer());
 
   // Make sure the font exists in the specified path:
   const ralewayRegular = await fetch(
