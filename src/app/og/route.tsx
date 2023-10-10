@@ -5,7 +5,12 @@ import { ImageResponse } from 'next/server';
 export const runtime = 'edge';
 
 const encodedTestImages = [
-  'https://drive.google.com/uc?export=view&id=1CS4rIB2EmceVb4336Gw8nXL99TNJ5Vso',
+  {
+    normal:
+      'https://drive.google.com/uc?export=view&id=1CS4rIB2EmceVb4336Gw8nXL99TNJ5Vso',
+    encoded:
+      'https%3A%2F%2Fdrive.google.com%2Fuc%3Fexport%3Dview%26id%3D1CS4rIB2EmceVb4336Gw8nXL99TNJ5Vso',
+  },
 ];
 
 export async function GET(request: Request) {
@@ -17,9 +22,10 @@ export async function GET(request: Request) {
     new URL('./assets/img/logo-and-headline.png', import.meta.url)
   ).then((res) => res.arrayBuffer());
 
-  const men = await fetch(
-    new URL('./assets/img/men.png', import.meta.url)
-  ).then((res) => res.arrayBuffer());
+  //   const men = await fetch(
+  //     //new URL('./assets/img/men.png', import.meta.url)
+  //     `${process.env.NEXT_PUBLIC_URL}/img/men.png`
+  //   ).then((res) => res.arrayBuffer());
 
   // Make sure the font exists in the specified path:
   const ralewayRegular = await fetch(
@@ -68,7 +74,7 @@ export async function GET(request: Request) {
               <div tw='flex pl-20'>
                 <h2
                   tw='flex flex-col text-3xl text-black'
-                  style={{ fontFamily: '"Raleway-Regular"' }}
+                  //style={{ fontFamily: '"Raleway-Regular"' }}
                 >
                   <span style={{ fontFamily: '"Raleway-ExtraBold"' }}>
                     {headline || 'Check out my awesome ART.'}
@@ -80,7 +86,12 @@ export async function GET(request: Request) {
               </div>
             </div>
             <div tw='flex items-end relative'>
-              <img src={men as any as string} width={415} height={590} tw='' />
+              <img
+                src={`${process.env.NEXT_PUBLIC_URL}/img/men.png`}
+                width={415}
+                height={590}
+                tw=''
+              />
               {graphic && (
                 <img
                   src={graphic}
